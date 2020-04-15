@@ -1,0 +1,15 @@
+<h1>Editing Book</h1>
+
+<% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% end %>
+
+<%= form_for(@book) do |f| %>
+<p>Title</p>
+<%= f.text_field :title %>
+<p>Body</p>
+<%= f.text_area :body %><br>
+<%= f.submit "Update Book" %><br>
+<%= link_to "Show", book_path(@book) %> | <a href="/books">Back</a>
+<% end %>
+
