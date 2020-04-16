@@ -32,7 +32,7 @@ class BooksController < ApplicationController
   	if book.update(book_params)
   	  redirect_to book_path(book), notice: "Book was successfully updated."
     else
-      redirect_to edit_book_path, flash: { error: book.errors.full_messages }
+      redirect_to edit_book_path,flash: { error: book.errors.full_messages }
     end
   end
 

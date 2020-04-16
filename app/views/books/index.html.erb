@@ -32,6 +32,7 @@
 
 <h2>New book</h2>
 <% if flash[:error] %>
+  <h2>errorが発生しました。</h2>
   <p><%= flash[:error] %></p>
 <% end %>
 <%= form_for(@book) do |f| %>
